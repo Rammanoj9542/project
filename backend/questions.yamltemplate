@@ -1,0 +1,19 @@
+# Keys must not be changed like topics, name and questions
+topics:
+  - category: Kubernetes           # Change the category name 
+    questions:
+      - What is Kubernetes and why is it used for container orchestration?      # Change the questions
+      - Explain the difference between a Pod and a Deployment in Kubernetes.
+      - How do you scale a Kubernetes Deployment?
+      # Add more questions related to this topic
+  - category: Topic2
+    questions:
+      - 
+      - 
+      - 
+  - category: Topic3
+    questions:
+      - 
+      - 
+      - 
+  # Add more topics as needed

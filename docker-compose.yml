@@ -1,0 +1,53 @@
+version: '3'
+services:  
+  backend:
+    build:
+      context: ./backend # Path to the directory containing the Python app
+      dockerfile: Dockerfile  # Specify the Python Dockerfile      
+    ports:
+      - "5001:5001"  # Map the container's port 5001 to the host's port 5001
+    volumes:
+      - ./backend:/app  # Mount the current directory into the /app directory in the container
+      # - C:/Users/Admin/projects/ai-tutor-bucket/data:/data
+      - /home/ubuntu/ai-tutor-bucket/data:/data
+      # - C:/Users/Admin/projects/ai-tutor-bucket/brillius_ai_tutor_app/backend/config:/config
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/archive:/archive
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/backend/config:/config
+      # - C:/Users/Admin/projects/ai-tutor-bucket/brillius_ai_tutor_app/backend/logs:/logs/backend
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/backend/logs:/logs/backend
+    depends_on:
+      - postgres  # Specify the name of the PostgreSQL service as a dependency
+    #networks:
+      #- myapp-network  # Connect to a custom network
+
+  frontend:
+    build:
+      context: ./frontend  # Path to the directory containing the Node.js UI app
+      dockerfile: Dockerfile # Specify the Node.js Dockerfile      
+    ports:
+      - "3000:3000" # Map the container's port 3000 to the host's port 3000
+    volumes:
+      - ./frontend:/app
+      # - C:/Users/Admin/projects/ai-tutor-bucket/data:/data
+      - /home/ubuntu/ai-tutor-bucket/data:/data
+      # - C:/Users/Admin/projects/ai-tutor-bucket/brillius_ai_tutor_app/frontend/config:/config
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/archive:/archive
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/frontend/config1:/config
+      # - C:/Users/Admin/projects/ai-tutor-bucket/brillius_ai_tutor_app/frontend/logs:/logs/frontend
+      - /home/ubuntu/ai-tutor-bucket/brillius_ai_tutor_app/frontend/logs:/logs/frontend
+
+  postgres:
+    image: postgres:latest
+    #container_name: my-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: questions
+    volumes:
+      # - C:/Users/Admin/projects/ai-tutor-db/postgres-data:/var/lib/postgresql/data     
+      - /home/ubuntu/ai-tutor-db/postgres-data1:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  

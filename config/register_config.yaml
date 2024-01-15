@@ -1,0 +1,23 @@
+user:
+  username: "akhil"
+  password: "password"
+  email: "user@example.com"
+  firstname: "User_Firstname"
+  lastname: "User_Lastname"
+  contact_number: "1234567890"
+
+admin:
+  username: "siva"
+  password: "password"
+  email: "admin@example.com"
+  firstname: "Admin_Firstname"
+  lastname: "Admin_Lastname"
+  contact_number: "9876543210"
+
+superadmin:
+  username: "sivatarak"
+  password: "password"
+  email: "superadmin@example.com"
+  firstname: "Superadmin_Firstname"
+  lastname: "Superadmin_Lastname"
+  contact_number: "5555555555"

@@ -1,0 +1,78 @@
+{
+    "API_URL": "http://192.168.165.127:5001",
+    "mediaDest": "data",
+    "questionDest": "config",
+    "LogoSource": "/Brillius_technologies.png",
+    "LogoAlt": "Brillius Technologies",
+    "LogoWidth": "70%",
+    "logFilePrefix": "app",
+    "Mode": {
+        "Audio": true,
+        "Video": true
+    },
+    "AudioSession": {
+        "PracticeMode": true,
+        "AssessmentMode": true
+    },
+    "VideoSession": {
+        "PracticeMode": true,
+        "AssessmentMode": true
+    },
+    "PracticeMode": {
+        "Label": "Practice",
+        "Feedbacks": true,
+        "Results": false,
+        "TabSwitching": true
+    },
+    "AssessmentMode": {
+        "Label": "Assessment",
+        "Feedbacks": false,
+        "Results": true,
+        "TabSwitching": false
+    },
+    "BothMode": {
+        "ActivationStatus": false,
+        "Feedbacks": true,
+        "Results": true,
+        "TabSwitching": false
+    },
+    "MaxTabSwitchingCount": 4,
+    "FullScreenMode": true,
+    "CutCopyPasteMenu": false,
+    "SkipAll": true,
+    "SessionDuration": 60,
+    "MaxAttempts": 10,
+    "Login": {
+        "Heading": "Login to your account"
+    },
+    "SuperAdminHome": {
+        "Heading": "Super Admin Homepage"
+    },
+    "AdminHome": {
+        "Heading": "Admin Homepage"
+    },
+    "UserHome": {
+        "Heading": "User Homepage"
+    },
+    "Audio": {
+        "Heading": "Audio Session"
+    },
+    "Video": {
+        "Heading": "Video Session"
+    },
+    "Dashboard": {
+        "Heading": "Dashboard"
+    },
+    "UserRegistration": {
+        "Heading": "User Registration"
+    },
+    "UserAccount": {
+        "Heading": "My Account"
+    },
+    "Results": {
+        "Heading": "Results"
+    },
+    "PasswordReset": {
+        "Heading": "Password Reset"
+    }
+}

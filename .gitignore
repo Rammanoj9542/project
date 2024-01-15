@@ -1,0 +1,42 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Uploaded files
+frontend/src/uploads/
+
+# Data files
+data/
+
+# dependencies
+frontend/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+frontend/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+backend/config.yaml
+db/questions.db
+frontend/src/config.json
+frontend/log/*
+
+backend/logger.log
+backend/logger.log
+
+/logs
